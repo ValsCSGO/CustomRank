@@ -1,3 +1,4 @@
+//change this command to use another one
 var customRankCommandString = "crank";
 
 var customRankSettings = new SettingsObject("CustomRank", [
@@ -20,6 +21,7 @@ customRankSettings.setCommand(customRankCommandString).setSize(250, 90);
 
 Setting.register(customRankSettings);
 
+//Sometimes people just need help
 register("worldLoad", function() {
   var firstLoad = customRankSettings.getSettingObject("Custom Rank", "First Load");
   if(firstLoad.value) {
