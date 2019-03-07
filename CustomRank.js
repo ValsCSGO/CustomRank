@@ -17,7 +17,7 @@ var customRankSettings = new SettingsObject("CustomRank", [
     }
 ]);
 
-customRankSettings.setCommand(customRankCommandString).setSize(250, 90);
+customRankSettings.setCommand(customRankCommandString).setSize(250, 100);
 
 Setting.register(customRankSettings);
 
