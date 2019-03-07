@@ -8,7 +8,7 @@ var customRankSettings = new SettingsObject("CustomRank", [
             new Setting.Toggle("Toggle Module", true),
             new Setting.TextInput("Rank", "&c[&fYOUTUBE&c]"),
             new Setting.TextInput("Nick", Player.getName()),
-            new Setting.Toggle("First Load", true),
+            new Setting.Toggle("First Load", true).setHidden(true),
             new Setting.Button("Reset Settings", "click", function() {
                 customRankSettings.reset();
                 customRankSettings.load();
@@ -17,7 +17,7 @@ var customRankSettings = new SettingsObject("CustomRank", [
     }
 ]);
 
-customRankSettings.setCommand(customRankCommandString).setSize(250, 100);
+customRankSettings.setCommand(customRankCommandString).setSize(250, 90);
 
 Setting.register(customRankSettings);
 
