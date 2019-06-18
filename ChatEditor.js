@@ -15,7 +15,10 @@ register("chat", function(event) {
     if (!contains(ChatLib.removeFormatting(msg), playerName)) {
         return;
     }
-
+    
+    msg = msg.replace(/&r/g, "");
+    var ranks = msg.substring(0, msg.indexOf(playerName)-1);
+    var split = ranks.split(" ");
     //Actually change the text
     var donorRank = split[split.length - 1];
     if (!isChangeableRank(donorRank)) {
